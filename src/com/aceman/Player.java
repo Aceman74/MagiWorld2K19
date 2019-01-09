@@ -13,7 +13,7 @@ public class Player {
 
     /**Constructeur par defaut*/
 
-    public Player() {
+    public Player() {/*
         classChoice = "Guerrier";
         lvl = 20;
         life = 100;
@@ -22,6 +22,7 @@ public class Player {
         intel = 2;
         name = "Barbarock";
         System.out.println("Vous avez un " +classChoice+ " du nom de " +name+ " de niveau " +lvl+ " et " +life+ " PV , " +force+ " force, " +agility+ " agilité, " +intel+ " intélligence.");
+    */
     }
 
     public Player ( String ClassChoice, String Name, int Lvl, int Life, int Force, int Agility, int Intel){
