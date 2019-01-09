@@ -3,10 +3,10 @@ package com.aceman;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public  class Game extends CreationJoueur {
+public  class Game extends CreationJoueur  {
 
 private String newGame;
-protected int choixAtq;
+public int choixAtq;
 private int reponse;
 private boolean p1Turn=false;
  private boolean p2Turn=false;
@@ -16,6 +16,28 @@ private static int playAgain = 0;
     public Game() {
 
         Scanner sc1 = new Scanner(System.in);
+
+        /*
+        if(P1.getClassChoice() == "Guerrier"){
+
+          Guerrier  P1 = new Guerrier();
+        }
+        if(P1.getClassChoice() == "Magicien"){
+
+            P1 = new Magicien();
+        }
+        else P1 = new Rodeur();
+        if(P2.getClassChoice() == "Guerrier"){
+
+            P2 = new Guerrier();
+        }
+        if(P2.getClassChoice() == "Magicien"){
+
+            P2 = new Magicien();
+        }
+        else P2 = new Rodeur();
+        */
+
         System.out.println("Qui veut commencer? " +P1.getName()+ " 1 ou "+P2.getName()+" 2.");
        reponse = sc1.nextInt();
         switch(reponse){
@@ -48,6 +70,9 @@ private static int playAgain = 0;
             p1Turn=false;
             p2Turn=true;
                 choixAtq = sc1.nextInt();
+                if (P1.getClassChoice() == "Guerrier"){
+                 P1.Guerrier1();
+                }
 
                 /*
                 if(choixAtq == 1 && P1.getClassChoice() == "Guerrier")

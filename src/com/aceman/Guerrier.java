@@ -1,7 +1,7 @@
 package com.aceman;
 
 public class Guerrier extends Game {
-   void Guerrier1(){
+    void Guerrier1(){
        switch (choixAtq){
            case 1:
                P2.setLife(P2.getLife()-P1.getForce());

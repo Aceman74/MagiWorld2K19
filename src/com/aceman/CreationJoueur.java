@@ -2,13 +2,13 @@ package com.aceman;
 
 import java.util.Scanner;
 
-class CreationJoueur extends Player {
+class CreationJoueur {
 
-  protected   Player P1 = new Player();
-  protected   Player P2 = new Player();
+  Player P1 = new Player();
+  Player P2 = new Player();
 
 
-    public CreationJoueur() {
+     CreationJoueur() {
 
           Scanner sc = new Scanner(System.in);
         int classeJ1, classeJ2, niveauJ1, niveauJ2, vieJ1, vieJ2, forceJ1 , forceJ2, agiliteJ1 , agiliteJ2, intelligenceJ1, intelligenceJ2, totalStatJ1, totalStatJ2;
@@ -22,7 +22,7 @@ class CreationJoueur extends Player {
         System.out.println("Choissisez votre nom : ");
         nameJ1=sc.nextLine();
         P1.setName(nameJ1);
-        boolean badAnswer = false;
+        boolean badAnswer ;
         do {
            System.out.println("Choissisez votre Classe \n 1: Guerrier, 2: Magicien, 3: Rodeur");
 
@@ -154,4 +154,5 @@ class CreationJoueur extends Player {
         System.out.println(" ");
 
     }
+
 }
