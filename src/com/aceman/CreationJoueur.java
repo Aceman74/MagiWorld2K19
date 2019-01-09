@@ -4,17 +4,20 @@ import java.util.Scanner;
 
 class CreationJoueur extends Player {
 
+  protected   Player P1 = new Player();
+  protected   Player P2 = new Player();
 
-    protected CreationJoueur() {
+
+    public CreationJoueur() {
 
           Scanner sc = new Scanner(System.in);
         int classeJ1, classeJ2, niveauJ1, niveauJ2, vieJ1, vieJ2, forceJ1 , forceJ2, agiliteJ1 , agiliteJ2, intelligenceJ1, intelligenceJ2, totalStatJ1, totalStatJ2;
         String  nameJ1, nameJ2,classeJ1String = "",classeJ2String = "";
 
 
+
         /* Creation joueur 1 */
 
-Player P1 = new Player();
         System.out.println("Création du Joueur 1 : ");
         System.out.println("Choissisez votre nom : ");
         nameJ1=sc.nextLine();
@@ -83,7 +86,6 @@ Player P1 = new Player();
         System.out.println(" ");
         /* Creation joueur 2 */
 
-        Player P2 = new Player();
 
         System.out.println("Création du Joueur 2 : ");
         System.out.println(" ");
@@ -150,5 +152,6 @@ Player P1 = new Player();
         System.out.println("Je suis un " +P2.getClassChoice()+ " du nom de " +P2.getName()+ " , je suis de niveau " +P2.getLvl()+ " avec " +P2.getLife()+ " PV");
         System.out.println("J'ai " +P2.getForce()+ " en Force, " +P2.getAgility()+ " en agilité et " +P2.getIntel()+ " en Intelligence!");
         System.out.println(" ");
+
     }
 }

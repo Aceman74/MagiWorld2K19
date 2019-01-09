@@ -1,5 +1,7 @@
 package com.aceman;
 
+import java.util.InputMismatchException;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,6 +16,14 @@ public class Main {
         new Game();
         System.out.println("Voulez-vous jouer une autre partie ? 1 : oui , 2 : non");
 
-
+       /* try {
+            playAgain = sc1.nextInt();
+        }
+        catch(InputMismatchException e) {
+            System.out.println("Oups choix incorrect, choisi 1 ou 2 .");
+        }
+        if (playAgain == 1){
+             new Game();
+        }*/
     }
 }

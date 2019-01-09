@@ -3,13 +3,13 @@ package com.aceman;
 import javax.naming.Name;
 
 public class Player {
-  private   int lvl ;
-    private int life;
-    private int force ;
-    private int agility;
-    private int intel;
-    private String name;
-    private String classChoice;
+  protected    int lvl ;
+    protected int life;
+    protected int force ;
+    protected int agility;
+    protected int intel;
+    protected String name;
+    protected String classChoice;
 
     /**Constructeur par defaut*/
 
