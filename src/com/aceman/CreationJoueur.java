@@ -3,21 +3,21 @@ package com.aceman;
 import java.util.Scanner;
 
 class CreationJoueur extends Player {
-    public CreationJoueur(String ClassChoice, String Name, int Lvl, int Life, int Force, int Agility, int Intel) {
-        super(ClassChoice, Name, Lvl, Life, Force, Agility, Intel);
-    }
 
-    protected  CreationJoueur() {
+
+    protected CreationJoueur() {
 
           Scanner sc = new Scanner(System.in);
-        int classeJ1, classeJ2, niveauJ1, niveauJ2, forceJ1 , forceJ2, agilitéJ1 , agilitéJ2, intelligenceJ1, intelligenceJ2, totalStatJ1, totalStatJ2;
-        String  nameJ1, namej2,classeJ1String = "",classeJ2String;
-        boolean badAnswer=false;
+        int classeJ1, classeJ2, niveauJ1, niveauJ2, vieJ1, vieJ2, forceJ1 , forceJ2, agiliteJ1 , agiliteJ2, intelligenceJ1, intelligenceJ2, totalStatJ1, totalStatJ2;
+        String  nameJ1, nameJ2,classeJ1String = "",classeJ2String = "";
+
+        /* Creation joueur 1 */
 
         System.out.println("Création du Joueur 1 : ");
         System.out.println("Choissisez votre nom : ");
         nameJ1 = sc.nextLine();
-       do {
+        boolean badAnswer = false;
+        do {
            System.out.println("Choissisez votre Classe \n 1: Guerrier, 2: Magicien, 3: Rodeur");
 
         classeJ1 = sc.nextInt();
@@ -35,7 +35,7 @@ class CreationJoueur extends Player {
                     badAnswer=true;
                     break;
         }
-       }while (badAnswer==true);
+       }while (badAnswer);
 
        do {
            System.out.println("Choissisez votre Niveau \n entre 0 et 100 :");
@@ -47,16 +47,18 @@ class CreationJoueur extends Player {
             badAnswer=true;
         }
         else badAnswer=false;
-       }while (badAnswer==true);
+       }while (badAnswer);
+       vieJ1= niveauJ1*5;
+        System.out.println("Votre niveau est " +niveauJ1+ " , vos PV sont de " +vieJ1);
        do {
 
         System.out.println("Choissisez votre niveau de Force \n Calculez bien, force + agilité + intélligence ne peu etre supérieur a votre niveau de personnage :");
         forceJ1= sc.nextInt();
         System.out.println("Choissisez votre niveau d' Agilité : \n ");
-        agilitéJ1 = sc.nextInt();
+        agiliteJ1 = sc.nextInt();
         System.out.println("Choissisez votre niveau d' Intélligence : \n ");
         intelligenceJ1 = sc.nextInt();
-        totalStatJ1= forceJ1+agilitéJ1+intelligenceJ1;
+        totalStatJ1= forceJ1+ agiliteJ1+intelligenceJ1;
         if (totalStatJ1 > niveauJ1)
         {
             System.out.println("Votre niveau de personnage (" +niveauJ1+ ") doit etre équivalent a la somme de vos statistiques ajoutées!");
@@ -64,7 +66,64 @@ class CreationJoueur extends Player {
             badAnswer=true;
         }
         else badAnswer = false;
-       }while (badAnswer==true);
-        Player P1 = new Player(classeJ1String);
+       }while (badAnswer);
+        Player player1 = new Player(classeJ1String,nameJ1,niveauJ1,vieJ1,forceJ1,agiliteJ1,intelligenceJ1);
+
+        /* Creation joueur 2 */
+
+        System.out.println("Création du Joueur 2 : ");
+        System.out.println("Choissisez votre nom : ");
+        nameJ2 = sc.nextLine();
+        do {
+            System.out.println("Choissisez votre Classe \n 1: Guerrier, 2: Magicien, 3: Rodeur");
+
+            classeJ2 = sc.nextInt();
+            switch(classeJ2){
+                case 1: classeJ2String= "Guerrier";
+                    badAnswer=false;
+                    break;
+                case 2: classeJ2String= "Magicien";
+                    badAnswer=false;
+                    break;
+                case 3: classeJ2String= "Rodeur";
+                    badAnswer=false;
+                    break;
+                default: System.out.println("Choix non valide!");
+                    badAnswer=true;
+                    break;
+            }
+        }while (badAnswer);
+
+        do {
+            System.out.println("Choissisez votre Niveau \n entre 0 et 100 :");
+            niveauJ2 = sc.nextInt();
+
+            if (niveauJ2 < 1 || niveauJ2 >100)
+            {
+                System.out.println("Le niveau doit etre entre 0 et 100!");
+                badAnswer=true;
+            }
+            else badAnswer=false;
+        }while (badAnswer);
+        vieJ2= niveauJ2*5;
+        System.out.println("Votre niveau est " +niveauJ2+ " , vos PV sont de " +vieJ2);
+        do {
+
+            System.out.println("Choissisez votre niveau de Force \n Calculez bien, force + agilité + intélligence ne peu etre supérieur a votre niveau de personnage :");
+            forceJ2= sc.nextInt();
+            System.out.println("Choissisez votre niveau d' Agilité : \n ");
+            agiliteJ2 = sc.nextInt();
+            System.out.println("Choissisez votre niveau d' Intélligence : \n ");
+            intelligenceJ2 = sc.nextInt();
+            totalStatJ2= forceJ2+agiliteJ2+intelligenceJ2;
+            if (totalStatJ2 > niveauJ2)
+            {
+                System.out.println("Votre niveau de personnage (" +niveauJ2+ ") doit etre équivalent a la somme de vos statistiques ajoutées!");
+                System.out.println("Vous avez (" +(totalStatJ2 - niveauJ2)+ ") Points de différence.");
+                badAnswer=true;
+            }
+            else badAnswer = false;
+        }while (badAnswer);
+         Player player2 = new Player(classeJ2String,nameJ2,niveauJ2,vieJ2,forceJ2,agiliteJ2,intelligenceJ2);
     }
 }

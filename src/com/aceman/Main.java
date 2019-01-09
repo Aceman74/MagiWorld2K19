@@ -1,8 +1,5 @@
 package com.aceman;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -13,13 +10,11 @@ public class Main {
         System.out.println("*                                         *");
         System.out.println("*******************************************");
         System.out.println("Bienvenue dans une nouvelle partie de MagiWorld 2019!");
-     new CreationJoueur();
+         new CreationJoueur();
 
-
-        System.out.println("Création du Joueur 2 : ");
+        new Game();
         System.out.println("Voulez-vous jouer une autre partie ? 1 : oui , 2 : non");
 
 
     }
-
 }

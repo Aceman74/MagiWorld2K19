@@ -3,15 +3,24 @@ package com.aceman;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public  class Game{
+public  class Game extends CreationJoueur {
 
 private String newGame;
-private String player1;
-private String player2;
+public String player1;
+public String player2;
+boolean switchTour=false;
 private static int playAgain = 0;
     public Game() {
 
+        super();
         Scanner sc1 = new Scanner(System.in);
+        System.out.println("Début du combat!");
+
+
+
+
+
+
 
         try {
             playAgain = sc1.nextInt();

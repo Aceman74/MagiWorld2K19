@@ -2,14 +2,14 @@ package com.aceman;
 
 import javax.naming.Name;
 
-public class Player  {
-  protected   int lvl ;
-    protected int life;
-    protected int force ;
-    protected int agility;
-    protected int intel;
-    protected String name;
-    protected String classChoice;
+public class Player {
+  private   int lvl ;
+    private int life;
+    private int force ;
+    private int agility;
+    private int intel;
+    private String name;
+    private String classChoice;
 
     /**Constructeur par defaut*/
 
@@ -26,13 +26,13 @@ public class Player  {
 
     public Player ( String ClassChoice, String Name, int Lvl, int Life, int Force, int Agility, int Intel){
 
-        lvl = Lvl;
-        life = Life;
-        force = Force;
-        agility = Agility;
-        intel = Intel;
-        name = Name;
-        classChoice = ClassChoice;
+        this.lvl = Lvl;
+        this.life = Life;
+        this.force = Force;
+        this.agility = Agility;
+        this.intel = Intel;
+        this.name = Name;
+        this.classChoice = ClassChoice;
 
     }
 
