@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.aceman","l":"CreationJoueur"},{"p":"com.aceman","l":"Game"},{"p":"com.aceman.Classe","l":"Guerrier"},{"p":"com.aceman.Classe","l":"Magicien"},{"p":"com.aceman","l":"Main"},{"p":"com.aceman","l":"Player"},{"p":"com.aceman.Classe","l":"Rodeur"}]
