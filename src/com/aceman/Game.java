@@ -67,9 +67,11 @@ private  int playAgain = 0;
         do {
 
         switch(reponse){
-            case 1:System.out.println(P1.getName()+" (" +P1.getLife()+ " Vitalité ), choisis ton attaque (1: Attaque basique, 2: Attaque spéciale)");
-            p1Turn=false;
-            p2Turn=true;
+            case 1:
+                p1Turn=false;
+                p2Turn=true;
+                System.out.println(P1.getName()+" (" +P1.getLife()+ " Vitalité ), choisis ton attaque (1: Attaque basique, 2: Attaque spéciale)");
+
                 choixAtq = sc1.nextInt();
                 if (choixAtq == 1 && P1.getClassChoice() == "Guerrier"){
                     Guerrier P1 = new Guerrier();
@@ -97,38 +99,35 @@ private  int playAgain = 0;
                 */
                 if(choixAtq == 2 && P1.getClassChoice() == "Guerrier"){
                     Guerrier P1 = new Guerrier();
-                    P1.Guerrier2();
+                    P1.Guerrier1();
                 }
                 if(choixAtq == 2 && P1.getClassChoice() == "Magicien"){
                 Magicien P1 = new Magicien();
                 P1.CheckLife1();
-                if(checkLife = false){
-                    System.out.println("Utilisation du sort 1");
-                    P1.Magicien1();
-                }else
-                    P1.Magicien2();
                 }
+
                 if(choixAtq == 2 && P1.getClassChoice() == "Rodeur"){
                 Rodeur P1 = new Rodeur();
-                P1.Rodeur2();
+                P1.Rodeur1();
             }
                 reponse = 2;
             break;
             case 2:
+                p1Turn=true;
+                p2Turn=false;
             System.out.println(P2.getName()+" (" +P2.getLife()+ " Vitalité ), choisis ton attaque (1: Attaque basique, 2: Attaque spéciale)");
-            p1Turn=true;
-            p2Turn=false;
+
                 choixAtq = sc1.nextInt();
 
                 if (choixAtq == 1 && P2.getClassChoice() == "Guerrier"){
                     Guerrier P2 = new Guerrier();
-                    P2.Guerrier1();
+                    P2.Guerrier2();
                 }if (choixAtq == 1 &&P2.getClassChoice() == "Magicien"){
                 Magicien P2 = new Magicien();
-                P2.Magicien1();
+                P2.Magicien2();
                 }if(choixAtq == 1 && P2.getClassChoice() == "Rodeur"){
                 Rodeur P2 = new Rodeur();
-                P2.Rodeur1();
+                P2.Rodeur2();
             }
                 if(choixAtq == 2 && P2.getClassChoice() == "Guerrier"){
                     Guerrier P2 = new Guerrier();
@@ -136,11 +135,6 @@ private  int playAgain = 0;
                 }if(choixAtq == 2 && P2.getClassChoice() == "Magicien"){
                 Magicien P2 = new Magicien();
                 P2.CheckLife2();
-                if(checkLife = false){
-                    System.out.println("Utilisation du sort 1");
-                    P2.Magicien2();
-                }else
-                    P2.Magicien2();
             }
                  if(choixAtq == 2 && P2.getClassChoice() == "Rodeur"){
                 Rodeur P2 = new Rodeur();

@@ -50,12 +50,22 @@ public class Magicien {
         if(P1.getLife()+(P1.getIntel()*2) > vieMaxJ1){
         System.out.println("Sort impossible, vous ne pouvez pas restaurer plus que votre max de santé!");
             checkLife =false;
-        }else checkLife = true;
+            choixAtq = 1;
+            Magicien1();
+        }else {
+            checkLife = true;
+            Magicien1();
+        }
     }
     void CheckLife2(){
         if(P2.getLife()+(P2.getIntel()*2) > vieMaxJ2){
             System.out.println("Sort impossible, vous ne pouvez pas restaurer plus que votre max de santé!");
             checkLife =false;
-        }else checkLife = true;
+            choixAtq = 1;
+            Magicien2();
+        }else {
+            checkLife = true;
+            Magicien2();
+        }
     }
 }
