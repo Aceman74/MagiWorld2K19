@@ -1,6 +1,7 @@
 package com.aceman;
 
 public class Player {
+
     private int lvl ;
     private int life;
     private int force ;
@@ -22,6 +23,17 @@ public class Player {
         System.out.println("Vous avez un " +classChoice+ " du nom de " +name+ " de niveau " +lvl+ " et " +life+ " PV , " +force+ " force, " +agility+ " agilité, " +intel+ " intélligence.");
     */
     }
+/**
+ * Creation du Joueur
+ *
+ * @param Lvl  Niveau du joueur
+ * @param  Life Sante du joueur
+ * @param Force Force du joueur
+ * @param Agility Agilite du joueur
+ * @param Intel Intelligence du joueur
+ * @param Name Nom du joueur
+ * @param ClassChoice Classe du joueur
+ * */
 
     public Player  ( String ClassChoice, String Name, int Lvl, int Life, int Force, int Agility, int Intel){
 
@@ -35,47 +47,47 @@ public class Player {
 
     }
 
-    int getLvl() {
+    public int getLvl() {
         return lvl;
     }
 
-     int getLife() {
+    public int getLife() {
         return life;
     }
 
-     int getForce() {
+    public int getForce() {
         return force;
     }
 
-     int getAgility() {
+    public int getAgility() {
         return agility;
     }
 
-     int getIntel() {
+    public int getIntel() {
         return intel;
     }
 
-     String getName() {
+    public String getName() {
         return name;
     }
 
-     String getClassChoice() {
+      String getClassChoice() {
         return classChoice;
     }
 
-     void setLvl(int lvl) {
+      void setLvl(int lvl) {
         this.lvl = lvl;
     }
 
-     void setLife(int life) {
+    public void setLife(int life) {
         this.life = life;
     }
 
-     void setForce(int force) {
+      void setForce(int force) {
         this.force = force;
     }
 
-     void setAgility(int agility) {
+    public  void setAgility(int agility) {
         this.agility = agility;
     }
 
@@ -83,7 +95,7 @@ public class Player {
         this.intel = intel;
     }
 
-     void setName(String name) {
+      void setName(String name) {
         this.name = name;
     }
 

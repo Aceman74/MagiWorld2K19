@@ -1,10 +1,14 @@
-package com.aceman;
+package com.aceman.Classe;
 import static com.aceman.CreationJoueur.*;
 import static com.aceman.Game.checkLife;
-
+/**
+ * Classe Magicien pour utilisation des sorts des joueurs.
+ * */
 public class Magicien {
-
-    void Magicien1(){
+    /**
+     * Actions du Magicien si joueur 1.
+     */
+    public  void Magicien1(){
 
         switch (choixAtq){
 
@@ -25,7 +29,10 @@ public class Magicien {
                 break;
         }
     }
-    void Magicien2(){
+    /**
+     * Actions du Magicien si joueur 2.
+     */
+    public void Magicien2(){
 
         switch (choixAtq){
 
@@ -46,7 +53,10 @@ public class Magicien {
                 break;
         }
     }
-    void CheckLife1(){
+    /**
+     * Methode de verification de vie max pour le sort 2 du joueur 1.
+     */
+    public  void CheckLife1(){
         if(P1.getLife()+(P1.getIntel()*2) > vieMaxJ1){
         System.out.println("Sort impossible, vous ne pouvez pas restaurer plus que votre max de santé!");
             checkLife =false;
@@ -57,7 +67,10 @@ public class Magicien {
             Magicien1();
         }
     }
-    void CheckLife2(){
+    /**
+     * Methode de verification de vie max pour le sort 2 du joueur 2.
+     */
+    public  void CheckLife2(){
         if(P2.getLife()+(P2.getIntel()*2) > vieMaxJ2){
             System.out.println("Sort impossible, vous ne pouvez pas restaurer plus que votre max de santé!");
             checkLife =false;

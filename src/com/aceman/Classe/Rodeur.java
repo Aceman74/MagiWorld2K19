@@ -1,9 +1,13 @@
-package com.aceman;
+package com.aceman.Classe;
 import static com.aceman.CreationJoueur.*;
-
+/**
+ * Classe Rodeur pour utilisation des sorts des joueurs.
+ * */
 public class Rodeur  {
-
-    void Rodeur1(){
+    /**
+     * Actions du Rodeur si joueur 1.
+     */
+    public  void Rodeur1(){
 
         switch (choixAtq){
             case 1:
@@ -21,7 +25,10 @@ public class Rodeur  {
                 break;
         }
     }
-    void Rodeur2(){
+    /**
+     * Actions du Rodeur si joueur 2.
+     */
+    public void Rodeur2(){
         switch (choixAtq){
             case 1:
                 P1.setLife(P1.getLife()-P2.getAgility());

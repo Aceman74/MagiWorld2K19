@@ -1,9 +1,13 @@
-package com.aceman;
+package com.aceman.Classe;
 import static com.aceman.CreationJoueur.*;
-
+/**
+ * Classe Guerrier pour utilisation des sorts des joueurs.
+* */
 public class Guerrier  {
-
-    void Guerrier1(){
+    /**
+     * Actions du Guerrier si joueur 1.
+     */
+    public void Guerrier1(){
 
        switch (choixAtq){
            case 1:
@@ -23,7 +27,10 @@ public class Guerrier  {
                    break;
        }
    }
-    void Guerrier2(){
+    /**
+     * Actions du Guerrier si joueur 2.
+     */
+    public  void Guerrier2(){
         switch (choixAtq){
             case 1:
                 P1.setLife(P1.getLife()-P2.getForce());

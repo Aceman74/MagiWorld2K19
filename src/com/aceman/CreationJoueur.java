@@ -2,14 +2,19 @@ package com.aceman;
 
 import java.util.Scanner;
 
-class CreationJoueur {
+public class CreationJoueur {
+    /**Declaration Joueur 1.*/
+public static  Player P1 = new Player();
+    /** Declaration Joueur 2.*/
+public static Player P2 = new Player();
+    /** Variable du choix d'attaque 1 ou 2.*/
+public static   int choixAtq;
+    /** Vie max pour le sort 2 du magicien.*/
+public static   int vieMaxJ2, vieMaxJ1;
 
-static  Player P1 = new Player();
-static Player P2 = new Player();
-static   int choixAtq;
-static   int vieMaxJ2, vieMaxJ1;
-
-
+/**
+ * Création d'un joueurs avec les @param de la classe Player.
+ * */
      CreationJoueur() {
 
           Scanner sc = new Scanner(System.in);
@@ -62,7 +67,7 @@ static   int vieMaxJ2, vieMaxJ1;
        }while (badAnswer);
        P1.setLvl(niveauJ1);
        vieJ1= niveauJ1*5;
-        System.out.println("Votre niveau est " +niveauJ1+ " , vos PV sont de " +vieJ1);
+        System.out.println("Votre niveau est " +niveauJ1+ " , vos PV sont de " +vieJ1+ " .");
         P1.setLife(vieJ1);
         vieMaxJ1 = vieJ1;
        do {
@@ -84,7 +89,7 @@ static   int vieMaxJ2, vieMaxJ1;
        }while (badAnswer);
        P1.setForce(forceJ1); P1.setAgility(agiliteJ1); P1.setIntel(intelligenceJ1);
 
-       System.out.println("Je suis un " +P1.getClassChoice()+ " du nom de " +P1.getName()+ " , je suis de niveau " +P1.getLvl()+ " avec " +P1.getLife()+ " PV");
+       System.out.println("Je suis un " +P1.getClassChoice()+ " du nom de " +P1.getName()+ " , je suis de niveau " +P1.getLvl()+ " avec " +P1.getLife()+ " PV,");
        System.out.println("J'ai " +P1.getForce()+ " en Force, " +P1.getAgility()+ " en agilité et " +P1.getIntel()+ " en Intelligence!");
         System.out.println(" ");
         /* Creation joueur 2 */
@@ -132,7 +137,7 @@ static   int vieMaxJ2, vieMaxJ1;
         }while (badAnswer);
         P2.setLvl(niveauJ2);
         vieJ2= niveauJ2*5;
-        System.out.println("Votre niveau est " +niveauJ2+ " , vos PV sont de " +vieJ2);
+        System.out.println("Votre niveau est " +niveauJ2+ " , vos PV sont de " +vieJ2+ " .");
         P2.setLife(vieJ2);
         vieMaxJ2 = vieJ2;
         do {
@@ -153,7 +158,7 @@ static   int vieMaxJ2, vieMaxJ1;
             else badAnswer = false;
         }while (badAnswer);
         P2.setForce(forceJ2); P2.setAgility(agiliteJ2); P2.setIntel(intelligenceJ2);
-        System.out.println("Je suis un " +P2.getClassChoice()+ " du nom de " +P2.getName()+ " , je suis de niveau " +P2.getLvl()+ " avec " +P2.getLife()+ " PV");
+        System.out.println("Je suis un " +P2.getClassChoice()+ " du nom de " +P2.getName()+ " , je suis de niveau " +P2.getLvl()+ " avec " +P2.getLife()+ " PV,");
         System.out.println("J'ai " +P2.getForce()+ " en Force, " +P2.getAgility()+ " en agilité et " +P2.getIntel()+ " en Intelligence!");
         System.out.println(" ");
 
