@@ -1,7 +1,11 @@
 package com.aceman;
 
-public class Guerrier extends Game {
+import static com.aceman.CreationJoueur.*;
+
+public class Guerrier  {
+
     void Guerrier1(){
+
        switch (choixAtq){
            case 1:
                P2.setLife(P2.getLife()-P1.getForce());

@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 class CreationJoueur {
 
-  Player P1 = new Player();
-  Player P2 = new Player();
+static  Player P1 = new Player();
+static Player P2 = new Player();
+static   int choixAtq;
 
 
      CreationJoueur() {

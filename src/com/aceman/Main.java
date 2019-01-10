@@ -11,7 +11,7 @@ public class Main {
         System.out.println("*******************************************");
         System.out.println("Bienvenue dans une nouvelle partie de MagiWorld 2019!");
         /*new CreationJoueur(); */
-        new Guerrier();
+        new  Game();
         System.out.println("Voulez-vous jouer une autre partie ? 1 : oui , 2 : non");
 
        /* try {

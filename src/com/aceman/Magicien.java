@@ -1,6 +1,7 @@
 package com.aceman;
+import static com.aceman.CreationJoueur.*;
 
-public class Magicien extends Game{
+public class Magicien {
     void Magicien1(){
         switch (choixAtq){
             case 1:

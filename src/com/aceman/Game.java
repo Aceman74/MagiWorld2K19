@@ -1,19 +1,18 @@
 package com.aceman;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
+import com.aceman.Guerrier;
 
 public  class Game extends CreationJoueur  {
 
 private String newGame;
-public int choixAtq;
 private int reponse;
 private boolean p1Turn=false;
  private boolean p2Turn=false;
-private static int playAgain = 0;
+private  int playAgain = 0;
 
 
-    public Game() {
+    public  Game() {
 
         Scanner sc1 = new Scanner(System.in);
 
@@ -71,7 +70,9 @@ private static int playAgain = 0;
             p2Turn=true;
                 choixAtq = sc1.nextInt();
                 if (P1.getClassChoice() == "Guerrier"){
-                 P1.Guerrier1();
+                    Guerrier P1 = new Guerrier();
+                    P1.Guerrier1();
+
                 }
 
                 /*

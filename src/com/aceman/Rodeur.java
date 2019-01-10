@@ -1,6 +1,7 @@
 package com.aceman;
+import static com.aceman.CreationJoueur.*;
 
-public class Rodeur extends Game{
+public class Rodeur  {
     void Rodeur1(){
         switch (choixAtq){
             case 1:

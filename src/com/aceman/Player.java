@@ -23,7 +23,7 @@ public class Player {
     */
     }
 
-    public Player ( String ClassChoice, String Name, int Lvl, int Life, int Force, int Agility, int Intel){
+    public Player  ( String ClassChoice, String Name, int Lvl, int Life, int Force, int Agility, int Intel){
 
         this.lvl = Lvl;
         this.life = Life;
