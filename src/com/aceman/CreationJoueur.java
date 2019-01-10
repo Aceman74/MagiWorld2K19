@@ -7,6 +7,7 @@ class CreationJoueur {
 static  Player P1 = new Player();
 static Player P2 = new Player();
 static   int choixAtq;
+static   int vieMaxJ2, vieMaxJ1;
 
 
      CreationJoueur() {
@@ -63,6 +64,7 @@ static   int choixAtq;
        vieJ1= niveauJ1*5;
         System.out.println("Votre niveau est " +niveauJ1+ " , vos PV sont de " +vieJ1);
         P1.setLife(vieJ1);
+        vieMaxJ1 = vieJ1;
        do {
 
         System.out.println("Choissisez votre niveau de Force \n Calculez bien, force + agilité + intélligence ne peu etre supérieur a votre niveau de personnage :");
@@ -132,6 +134,7 @@ static   int choixAtq;
         vieJ2= niveauJ2*5;
         System.out.println("Votre niveau est " +niveauJ2+ " , vos PV sont de " +vieJ2);
         P2.setLife(vieJ2);
+        vieMaxJ2 = vieJ2;
         do {
 
             System.out.println("Choissisez votre niveau de Force \n Calculez bien, force + agilité + intélligence ne peu etre supérieur a votre niveau de personnage :");

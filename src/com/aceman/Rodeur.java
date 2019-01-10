@@ -2,19 +2,19 @@ package com.aceman;
 import static com.aceman.CreationJoueur.*;
 
 public class Rodeur  {
+
     void Rodeur1(){
+
         switch (choixAtq){
             case 1:
-                P2.setLife(P2.getLife()-P1.getForce());
-                System.out.println(P1.getName()+" Utilise Coup d’Épée et inflige " +P1.getForce()+ " dégats." );
-                System.out.println(P2.getName()+" Perd " +P1.getForce()+ " Points de vies." );
+                P2.setLife(P2.getLife()-P1.getAgility());
+                System.out.println(P1.getName()+" Utilise Tir à l’Arc et inflige " +P1.getAgility()+ " dégats." );
+                System.out.println(P2.getName()+" Perd " +P1.getAgility()+ " Points de vies." );
                 break;
             case 2:
-                P2.setLife(P2.getLife()-(P1.getForce()*2));
-                P1.setLife(P1.getLife()-(P1.getForce()/2));
-                System.out.println(P1.getName()+" Utilise Coup de Rage et inflige " +(P1.getForce()*2)+ " de dégats.");
-                System.out.println(P2.getName()+" Perd " +(P1.getForce()*2)+ " Points de vies." );
-                System.out.println(P1.getName()+" Perd " +(P1.getForce()/2)+ " Points de vies." );
+                P1.setAgility(P1.getAgility()+(P1.getLvl()/2));
+                System.out.println(P1.getName()+" Utilise Concentration et gagne " +(P1.getLvl()/2)+ " d'agilité.");
+                System.out.println(P1.getName()+" A un total de " +P1.getAgility()+ " Points d'agilité." );
                 break;
             default:
                 System.out.println("Une erreur est survenue.");
@@ -24,16 +24,14 @@ public class Rodeur  {
     void Rodeur2(){
         switch (choixAtq){
             case 1:
-                P1.setLife(P1.getLife()-P2.getForce());
-                System.out.println(P2.getName()+" Utilise Coup d’Épée et inflige " +P2.getForce()+ " dégats." );
-                System.out.println(P1.getName()+" Perd " +P2.getForce()+ " Points de vies." );
+                P1.setLife(P1.getLife()-P2.getAgility());
+                System.out.println(P2.getName()+" Utilise Tir à l’Arc et inflige " +P2.getAgility()+ " dégats." );
+                System.out.println(P1.getName()+" Perd " +P2.getAgility()+ " Points de vies." );
                 break;
             case 2:
-                P1.setLife(P1.getLife()-(P2.getForce()*2));
-                P2.setLife(P2.getLife()-(P2.getForce()/2));
-                System.out.println(P2.getName()+" Utilise Coup de Rage et inflige " +(P2.getForce()*2)+ " de dégats.");
-                System.out.println(P1.getName()+" Perd " +(P2.getForce()*2)+ " Points de vies." );
-                System.out.println(P2.getName()+" Perd " +(P2.getForce()/2)+ " Points de vies." );
+                P2.setAgility(P2.getAgility()+(P2.getLvl()/2));
+                System.out.println(P2.getName()+" Utilise Concentration et gagne " +(P2.getLvl()/2)+ " d'agilité.");
+                System.out.println(P2.getName()+" A un total de " +P2.getAgility()+ " Points d'agilité." );
                 break;
             default:
                 System.out.println("Une erreur est survenue.");

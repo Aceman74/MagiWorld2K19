@@ -9,6 +9,7 @@ private String newGame;
 private int reponse;
 private boolean p1Turn=false;
  private boolean p2Turn=false;
+ static boolean checkLife;
 private  int playAgain = 0;
 
 
@@ -19,23 +20,24 @@ private  int playAgain = 0;
         /*
         if(P1.getClassChoice() == "Guerrier"){
 
-          Guerrier  P1 = new Guerrier();
+                    Guerrier P1 = new Guerrier();
         }
         if(P1.getClassChoice() == "Magicien"){
 
-            P1 = new Magicien();
+           Magicien P1 = new Magicien();
         }
-        else P1 = new Rodeur();
+        else {Rodeur P1 = new Rodeur();}
+
         if(P2.getClassChoice() == "Guerrier"){
 
-            P2 = new Guerrier();
+          Guerrier  P2 = new Guerrier();
         }
         if(P2.getClassChoice() == "Magicien"){
 
-            P2 = new Magicien();
+           Magicien P2 = new Magicien();
         }
-        else P2 = new Rodeur();
-        */
+        else {Rodeur P2 = new Rodeur();}
+*/
 
         System.out.println("Qui veut commencer? " +P1.getName()+ " 1 ou "+P2.getName()+" 2.");
        reponse = sc1.nextInt();
@@ -69,12 +71,16 @@ private  int playAgain = 0;
             p1Turn=false;
             p2Turn=true;
                 choixAtq = sc1.nextInt();
-                if (P1.getClassChoice() == "Guerrier"){
+                if (choixAtq == 1 && P1.getClassChoice() == "Guerrier"){
                     Guerrier P1 = new Guerrier();
                     P1.Guerrier1();
-
-                }
-
+                }if (choixAtq == 1 &&P1.getClassChoice() == "Magicien"){
+                Magicien P1 = new Magicien();
+                P1.Magicien1();
+                }if(choixAtq == 1 && P1.getClassChoice() == "Rodeur"){
+                    Rodeur P1 = new Rodeur();
+                    P1.Rodeur1();
+                    }
                 /*
                 if(choixAtq == 1 && P1.getClassChoice() == "Guerrier")
                 {P2.setLife(P2.getLife()-P1.getForce());
@@ -88,7 +94,24 @@ private  int playAgain = 0;
                         }
                     }
                 }
-                if(choixAtq == 2 && P1.getClassChoice() == "Guerrier")
+                */
+                if(choixAtq == 2 && P1.getClassChoice() == "Guerrier"){
+                    Guerrier P1 = new Guerrier();
+                    P1.Guerrier2();
+                }
+                if(choixAtq == 2 && P1.getClassChoice() == "Magicien"){
+                Magicien P1 = new Magicien();
+                P1.CheckLife1();
+                if(checkLife = false){
+                    System.out.println("Utilisation du sort 1");
+                    P1.Magicien1();
+                }else
+                    P1.Magicien2();
+                }
+                if(choixAtq == 2 && P1.getClassChoice() == "Rodeur"){
+                Rodeur P1 = new Rodeur();
+                P1.Rodeur2();
+            }
                 reponse = 2;
             break;
             case 2:
@@ -96,28 +119,46 @@ private  int playAgain = 0;
             p1Turn=true;
             p2Turn=false;
                 choixAtq = sc1.nextInt();
+
+                if (choixAtq == 1 && P2.getClassChoice() == "Guerrier"){
+                    Guerrier P2 = new Guerrier();
+                    P2.Guerrier1();
+                }if (choixAtq == 1 &&P2.getClassChoice() == "Magicien"){
+                Magicien P2 = new Magicien();
+                P2.Magicien1();
+                }if(choixAtq == 1 && P2.getClassChoice() == "Rodeur"){
+                Rodeur P2 = new Rodeur();
+                P2.Rodeur1();
+            }
+                if(choixAtq == 2 && P2.getClassChoice() == "Guerrier"){
+                    Guerrier P2 = new Guerrier();
+                    P2.Guerrier2();
+                }if(choixAtq == 2 && P2.getClassChoice() == "Magicien"){
+                Magicien P2 = new Magicien();
+                P2.CheckLife2();
+                if(checkLife = false){
+                    System.out.println("Utilisation du sort 1");
+                    P2.Magicien2();
+                }else
+                    P2.Magicien2();
+            }
+                 if(choixAtq == 2 && P2.getClassChoice() == "Rodeur"){
+                Rodeur P2 = new Rodeur();
+                P2.Rodeur2();
+            }
                 reponse = 1;
             break;
 
             default:
+                System.out.println("Une Erreur est survenue.");
 
-
-                */
         }
 
-        }while(P1.getLife()>0 || P2.getLife()>0);
+        }while(P1.getLife()>0 && P2.getLife()>0);
         if(P1.getLife()<=0 || P2.getLife()<=0){
             System.out.println("Fin du combat! Le vainqueur est " +calculVainqueur()+ " Félicitation!");
         }
         System.out.println("A bientot!");
-
-
-
-
-
-
-
-
 
     }
     public String calculVainqueur(){

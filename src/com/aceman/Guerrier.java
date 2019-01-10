@@ -1,5 +1,4 @@
 package com.aceman;
-
 import static com.aceman.CreationJoueur.*;
 
 public class Guerrier  {
